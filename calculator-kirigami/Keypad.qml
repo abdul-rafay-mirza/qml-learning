@@ -126,10 +126,9 @@ RowLayout {
         }
 
         OperatorButton {
-            text: "="
+            text: "."
             onClicked: {
-                // Plaeholder
-                backend.evaluate()
+                backend.append_to_screen(".")
             }
         }
 
@@ -137,6 +136,13 @@ RowLayout {
             text: "CLS"
             onClicked: {
                 backend.clear_screen()
+            }
+        }
+
+        OperatorButton {
+            text: "="
+            onClicked: {
+                backend.evaluate()
             }
         }
     }
