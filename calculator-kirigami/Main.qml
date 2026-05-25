@@ -6,6 +6,8 @@ import org.kde.kirigami as Kirigami
 Kirigami.ApplicationWindow {
     id: root
     title: "Simple Calculator App"
+    width: 500
+    height: 700
 
     property string display_string: ""
 
