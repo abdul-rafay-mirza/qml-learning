@@ -35,12 +35,7 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            // Dummy
-            Rectangle {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                color: "#000000"
-            }
+            ToDoCardsList{}
         }
     }
 }

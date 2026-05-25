@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from pathlib import Path
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
@@ -22,7 +23,19 @@ class Backend(QObject):
     def get_text_from_text_field(self, text: str):
         window = self.get_window()
         if window:
-            print(text)
+            # 1. Read from notes.json and store it as a python dictionary
+            json_file = open('notes.json', 'r')
+            notes_dict: dict = json.load(json_file)
+
+            # 2. Append the text from the text field inside the dictionary
+            notes_dict['notes'].append(text)
+            json_file.close()
+
+            # 3. Dump the new array in the json file
+            json_file_for_writing = open('notes.json', 'w')
+            json.dump(notes_dict, json_file_for_writing)
+            json_file_for_writing.close()
+
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
