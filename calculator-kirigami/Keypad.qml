@@ -89,5 +89,9 @@ RowLayout {
         OperatorButton {
             text: "="
         }
+
+        OperatorButton {
+            text: "CLS"
+        }
     }
 }

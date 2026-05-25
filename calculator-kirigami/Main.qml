@@ -7,7 +7,14 @@ Kirigami.ApplicationWindow {
     id: root
     title: "Simple Calculator App"
 
+    property string display: ""
+
     pageStack.initialPage: CalculatorPage {
-        displayed_text: "Some text here"
+        displayed_text: thisString
+    }
+
+    // Javascript
+    function display(thisString) {
+        display = thisString
     }
 }
