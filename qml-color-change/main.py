@@ -20,19 +20,19 @@ class Backend(QObject):
     def change_color_red(self):
         window = self.get_window()
         if window:
-                window.changeColorRed()
+            window.changeColorRed()
 
     @Slot()
     def change_color_green(self):
         window = self.get_window()
         if window:
-                window.changeColorGreen()
+            window.changeColorGreen()
 
     @Slot()
     def change_color_blue(self):
         window = self.get_window()
         if window:
-                window.changeColorBlue()
+            window.changeColorBlue()
 
 
 if __name__ == "__main__":

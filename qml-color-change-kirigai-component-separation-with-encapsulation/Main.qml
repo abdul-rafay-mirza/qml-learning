@@ -13,7 +13,7 @@ Kirigami.ApplicationWindow {
     property color activeColorRectangle: "#333333"
 
     // The first page shown (initial page in the bottom of the page stack)
-    pageStack.initialPage: ColorPage{
+    pageStack.initialPage: ColorPage {
         rectangleColor: activeColorRectangle
     }
 
