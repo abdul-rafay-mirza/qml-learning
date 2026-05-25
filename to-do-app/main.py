@@ -5,7 +5,6 @@ from pathlib import Path
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import QObject, Slot
-# 1. Import QQuickStyle
 from PySide6.QtQuickControls2 import QQuickStyle 
 
 class Backend(QObject):
@@ -21,6 +20,10 @@ class Backend(QObject):
 
     @Slot(str)
     def get_text_from_text_field(self, text: str):
+        '''
+        stores the text from the text field in json file
+        '''
+
         window = self.get_window()
         if window:
             # 1. Read from notes.json and store it as a python dictionary
@@ -35,6 +38,20 @@ class Backend(QObject):
             json_file_for_writing = open('notes.json', 'w')
             json.dump(notes_dict, json_file_for_writing)
             json_file_for_writing.close()
+
+            self.list_to_javascript_qml()
+
+    def list_to_javascript_qml(self):
+        window = self.get_window()
+        if window:
+            # 1. Read notes from json file
+            myfile = open('notes.json', 'r')
+            notes: dict[list[str]] = json.load(myfile)
+            myfile.close()
+            notes_array = notes['notes']
+
+            # 2. Call the javascript function inside qml file
+            window.getNotes(notes_array)
 
 
 if __name__ == "__main__":

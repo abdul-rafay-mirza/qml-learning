@@ -38,4 +38,8 @@ Kirigami.ApplicationWindow {
             ToDoCardsList{}
         }
     }
+
+    function getNotes(notesArray) {
+        console.log(notesArray)
+    }
 }
