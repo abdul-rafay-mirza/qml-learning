@@ -18,6 +18,7 @@ Kirigami.Page {
             Layout.fillWidth: true
             // Give the display an exact height, or it will collapse to 0
             Layout.preferredHeight: 80
+            Layout.bottomMargin: 10
 
             Label {
                 text: displayed_text
