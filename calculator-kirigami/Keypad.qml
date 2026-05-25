@@ -20,14 +20,23 @@ RowLayout {
 
             NumericButton {
                 text: "1"
+                onClicked: {
+                    backend.append_to_screen("1")
+                }
             }
 
             NumericButton {
                 text: "2"
+                onClicked: {
+                    backend.append_to_screen("2")
+                }
             }
 
             NumericButton {
                 text: "3"
+                onClicked: {
+                    backend.append_to_screen("3")
+                }
             }
         }
         RowLayout {
@@ -36,14 +45,23 @@ RowLayout {
 
             NumericButton {
                 text: "4"
+                onClicked: {
+                    backend.append_to_screen("4")
+                }
             }
 
             NumericButton {
                 text: "5"
+                onClicked: {
+                    backend.append_to_screen("5")
+                }
             }
 
             NumericButton {
                 text: "6"
+                onClicked: {
+                    backend.append_to_screen("6")
+                }
             }
         }
         RowLayout {
@@ -52,14 +70,23 @@ RowLayout {
 
             NumericButton {
                 text: "7"
+                onClicked: {
+                    backend.append_to_screen("7")
+                }
             }
 
             NumericButton {
                 text: "8"
+                onClicked: {
+                    backend.append_to_screen("8")
+                }
             }
 
             NumericButton {
                 text: "9"
+                onClicked: {
+                    backend.append_to_screen("9")
+                }
             }
         }
     }
@@ -72,26 +99,45 @@ RowLayout {
 
         OperatorButton {
             text: "+"
+            onClicked: {
+                backend.append_to_screen("+")
+            }
         }
 
         OperatorButton {
             text: "-"
+            onClicked: {
+                backend.append_to_screen("-")
+            }
         }
 
         OperatorButton {
             text: "x"
+            onClicked: {
+                backend.append_to_screen("x")
+            }
         }
         
         OperatorButton {
             text: "/"
+            onClicked: {
+                backend.append_to_screen("/")
+            }
         }
 
         OperatorButton {
             text: "="
+            onClicked: {
+                // Plaeholder
+                backend.append_to_screen("=")
+            }
         }
 
         OperatorButton {
             text: "CLS"
+            onClicked: {
+                backend.clear_screen()
+            }
         }
     }
 }

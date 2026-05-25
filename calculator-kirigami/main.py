@@ -17,22 +17,28 @@ class Backend(QObject):
         return None
 
     @Slot()
-    def change_color_red(self):
+    def set_screen(self, thisString):
         window = self.get_window()
         if window:
-            window.changeColorRed()
+            window.display(thisString)
 
     @Slot()
-    def change_color_green(self):
+    def clear_screen(self):
         window = self.get_window()
         if window:
-            window.changeColorGreen()
+            window.display("")
 
     @Slot()
-    def change_color_blue(self):
+    def get_screen_text(self):
         window = self.get_window()
         if window:
-            window.changeColorBlue()
+            screen_text = window.getScreenText()
+            return screen_text
+
+    @Slot(str)
+    def append_to_screen(self, num_or_op: str):
+        text = self.get_screen_text()
+        self.set_screen(text + num_or_op)
 
 
 if __name__ == "__main__":
