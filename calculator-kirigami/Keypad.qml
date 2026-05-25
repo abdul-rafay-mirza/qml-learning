@@ -39,6 +39,7 @@ RowLayout {
                 }
             }
         }
+
         RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -64,6 +65,7 @@ RowLayout {
                 }
             }
         }
+
         RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -86,6 +88,18 @@ RowLayout {
                 text: "9"
                 onClicked: {
                     backend.append_to_screen("9")
+                }
+            }
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            NumericButton {
+                text: "0"
+                onClicked: {
+                    backend.append_to_screen("0")
                 }
             }
         }
