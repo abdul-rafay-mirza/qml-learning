@@ -40,6 +40,17 @@ class Backend(QObject):
         text = self.get_screen_text()
         self.set_screen(text + num_or_op)
 
+    @Slot()
+    def evaluate(self):
+        '''
+        Calculates from the calculators screen and displays it there
+        No checks as of yet, expression needs to be valid
+        '''
+
+        text_from_screen = self.get_screen_text()
+        answer = eval(text_from_screen)
+        self.clear_screen()
+        self.set_screen(answer)
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)

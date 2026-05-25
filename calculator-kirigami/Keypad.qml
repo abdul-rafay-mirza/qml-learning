@@ -112,9 +112,9 @@ RowLayout {
         }
 
         OperatorButton {
-            text: "x"
+            text: "*"
             onClicked: {
-                backend.append_to_screen("x")
+                backend.append_to_screen("*")
             }
         }
         
@@ -129,7 +129,7 @@ RowLayout {
             text: "="
             onClicked: {
                 // Plaeholder
-                backend.append_to_screen("=")
+                backend.evaluate()
             }
         }
 
