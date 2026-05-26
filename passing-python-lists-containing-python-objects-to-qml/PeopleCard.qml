@@ -5,22 +5,23 @@ import org.kde.kirigami as Kirigami
 
 Kirigami.Card {
     banner.title: modelData.name
-    width : id_peopleList.width
+    banner.titleIcon: "steam_icon_322170"
+    width: id_peopleList.width
     height: implicitHeight
 
     contentItem: ColumnLayout {
         spacing: 4
-        
-        Controls.Label {
+
+        Kirigami.IconTitleSubtitle {
+            icon.name: "view-calendar-birthday"
+            title: "Age: " + modelData.age
             Layout.fillWidth: true
-            text: "Age: " + modelData.age
-            wrapMode: Text.Wrap
         }
 
-        Controls.Label {
+        Kirigami.IconTitleSubtitle {
+            icon.name: "gender"
+            title: "Gender: " + modelData.gender
             Layout.fillWidth: true
-            text: "Gender: " + modelData.gender
-            wrapMode: Text.Wrap
         }
     }
 }
