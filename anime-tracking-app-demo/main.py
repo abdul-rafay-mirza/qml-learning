@@ -31,18 +31,29 @@ class Backend(QObject):
             single_anime_verbose: dict = anime_list_verbose[x]
 
             anime_name: str = single_anime_verbose["title"]["english"]
+            # print(anime_name)
             format_type: str = single_anime_verbose["format"]
+            # print(format_type)
             status: str = single_anime_verbose["status"]
+            # print(status)
             episodes: int = single_anime_verbose["episodes"]
+            # print(episodes)
             cover_image: str = single_anime_verbose["coverImage"]["large"]
+            # print(cover_image)
             average_score: int = single_anime_verbose["averageScore"]
+            # print(average_score)
 
             anime_object = Anime(anime_name, format_type, status, episodes, cover_image, average_score)
+            # print(anime_object.getName())
 
             self.__animeList.append(anime_object)
 
         return self.__animeList
 
+    def list_to_javascript_qml(self):
+        window = self.get_window()
+        if window:
+            window.pythonToQML(self.json_to_anime_list())
 
 
 
