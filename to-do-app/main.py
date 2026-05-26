@@ -65,6 +65,16 @@ if __name__ == "__main__":
     backend = Backend(engine)
     engine.rootContext().setContextProperty("backend", backend)
 
+    # 1. Define a function that runs exactly when the engine finishes building the window
+    def on_object_created(obj, obj_url):
+        if obj is None:
+            sys.exit(-1)
+        # 2. Call your json loading method here!
+        backend.list_to_javascript_qml()
+
+    # 3. Connect the signal to your function BEFORE loading the QML
+    engine.objectCreated.connect(on_object_created)
+
     qml_file = Path(__file__).resolve().parent / "Main.qml"
     engine.load(str(qml_file))
 
