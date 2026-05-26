@@ -3,9 +3,23 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-// Dummy
-Rectangle {
+ListView {
+    id: taskListView
     Layout.fillWidth: true
     Layout.fillHeight: true
-    color: "#000000"
+    clip: true
+
+    delegate: Kirigami.Card {
+        width: taskListView.width
+        contentItem: Controls.Label {
+            text: modelData
+            wrapMode: Text.Wrap
+        }
+    }
+
+    // ATTACH THE VISUAL SCROLLBAR
+    Controls.ScrollBar.vertical: Controls.ScrollBar {
+        active: true // Makes it visible when scrolling or hovering
+        policy: Controls.ScrollBar.AsNeeded // Only shows up if there are enough tasks to scroll
+    }
 }

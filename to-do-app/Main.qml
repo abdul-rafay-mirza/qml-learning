@@ -7,6 +7,8 @@ Kirigami.ApplicationWindow {
     id: root
     title: "To-do App"
 
+    property list<string> notesList
+
     pageStack.initialPage: Kirigami.Page {
         title: "To-do App"
 
@@ -35,11 +37,14 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            ToDoCardsList{}
+            ToDoCardsList {
+                model: notesList
+            }
         }
     }
 
     function getNotes(notesArray) {
-        console.log(notesArray)
+        // console.log(notesArray)
+        notesList = notesArray
     }
 }
