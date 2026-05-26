@@ -1,0 +1,315 @@
+{
+    "data": {
+        "Page": {
+            "pageInfo": {
+                "total": 10,
+                "currentPage": 1,
+                "lastPage": 1,
+                "hasNextPage": false,
+                "perPage": 10
+            },
+            "media": [
+                {
+                    "id": 1,
+                    "title": {
+                        "romaji": "Fullmetal Alchemist: Brotherhood",
+                        "english": "Fullmetal Alchemist: Brotherhood",
+                        "native": "鋼の錬金術師 FULLMETAL ALCHEMIST"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "After a failed alchemical ritual, brothers Edward and Alphonse Elric set out to find the Philosopher's Stone to restore their bodies.",
+                    "startDate": { "year": 2009, "month": 4, "day": 5 },
+                    "endDate": { "year": 2010, "month": 7, "day": 4 },
+                    "season": "SPRING",
+                    "seasonYear": 2009,
+                    "episodes": 64,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-KJTQz9AIm6Wk.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5114-KJTQz9AIm6Wk.jpg",
+                        "color": "#e45e1e"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-t5oyBGMdKRBj.jpg",
+                    "genres": ["Action", "Adventure", "Drama", "Fantasy"],
+                    "averageScore": 93,
+                    "popularity": 350000,
+                    "studios": {
+                        "nodes": [{ "id": 4, "name": "Bones", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": {
+                        "romaji": "Shingeki no Kyojin",
+                        "english": "Attack on Titan",
+                        "native": "進撃の巨人"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "In a world where humanity lives inside cities surrounded by enormous walls due to the Titans, a young boy vows to cleanse the earth of them after his mother is killed.",
+                    "startDate": { "year": 2013, "month": 4, "day": 7 },
+                    "endDate": { "year": 2013, "month": 9, "day": 29 },
+                    "season": "SPRING",
+                    "seasonYear": 2013,
+                    "episodes": 25,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C0VCPpFRHIxC.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-C0VCPpFRHIxC.jpg",
+                        "color": "#8b6044"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+                    "genres": ["Action", "Drama", "Fantasy", "Mystery"],
+                    "averageScore": 90,
+                    "popularity": 420000,
+                    "studios": {
+                        "nodes": [{ "id": 858, "name": "Wit Studio", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 3,
+                    "title": {
+                        "romaji": "Steins;Gate",
+                        "english": "Steins;Gate",
+                        "native": "シュタインズ・ゲート"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "A self-proclaimed mad scientist accidentally discovers time travel via text messages, setting off a chain of events that threatens the lives of those around him.",
+                    "startDate": { "year": 2011, "month": 4, "day": 6 },
+                    "endDate": { "year": 2011, "month": 9, "day": 14 },
+                    "season": "SPRING",
+                    "seasonYear": 2011,
+                    "episodes": 24,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-puPmCfV1xbgb.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9253-puPmCfV1xbgb.jpg",
+                        "color": "#e4a15d"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9253-rMmfXGXBpUGC.jpg",
+                    "genres": ["Drama", "Sci-Fi", "Thriller"],
+                    "averageScore": 92,
+                    "popularity": 300000,
+                    "studios": {
+                        "nodes": [{ "id": 19, "name": "White Fox", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 4,
+                    "title": {
+                        "romaji": "Hunter x Hunter (2011)",
+                        "english": "Hunter x Hunter (2011)",
+                        "native": "ハンター×ハンター"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "Gon Freecss aspires to become a Hunter, a skilled individual capable of tracking down secret treasures, rare creatures, and even other people. In his search for his missing father, he uncovers a world full of danger.",
+                    "startDate": { "year": 2011, "month": 10, "day": 2 },
+                    "endDate": { "year": 2014, "month": 9, "day": 24 },
+                    "season": "FALL",
+                    "seasonYear": 2011,
+                    "episodes": 148,
+                    "duration": 23,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-NmF3PIbYpCEt.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11061-NmF3PIbYpCEt.jpg",
+                        "color": "#e4c05e"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-aQLkFNbZSfJm.jpg",
+                    "genres": ["Action", "Adventure", "Fantasy"],
+                    "averageScore": 91,
+                    "popularity": 330000,
+                    "studios": {
+                        "nodes": [{ "id": 11, "name": "Madhouse", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 5,
+                    "title": {
+                        "romaji": "Violet Evergarden",
+                        "english": "Violet Evergarden",
+                        "native": "ヴァイオレット・エヴァーガーデン"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "A young former soldier who lost her arms in the war begins working as an Auto Memory Doll, writing letters for others as she searches for the meaning of the last words her commanding officer said to her.",
+                    "startDate": { "year": 2018, "month": 1, "day": 11 },
+                    "endDate": { "year": 2018, "month": 4, "day": 5 },
+                    "season": "WINTER",
+                    "seasonYear": 2018,
+                    "episodes": 13,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-jenAlMoJbkgp.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21827-jenAlMoJbkgp.jpg",
+                        "color": "#5ba4c8"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21827-HUBZlFNgGhSx.jpg",
+                    "genres": ["Drama", "Fantasy", "Slice of Life"],
+                    "averageScore": 85,
+                    "popularity": 260000,
+                    "studios": {
+                        "nodes": [{ "id": 2, "name": "Kyoto Animation", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 6,
+                    "title": {
+                        "romaji": "Kimetsu no Yaiba",
+                        "english": "Demon Slayer: Kimetsu no Yaiba",
+                        "native": "鬼滅の刃"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "A young boy becomes a demon slayer after his family is slaughtered and his sister is turned into a demon, vowing to find a cure and avenge his family.",
+                    "startDate": { "year": 2019, "month": 4, "day": 6 },
+                    "endDate": { "year": 2019, "month": 9, "day": 28 },
+                    "season": "SPRING",
+                    "seasonYear": 2019,
+                    "episodes": 26,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-PEn1CTc93blC.jpg",
+                        "color": "#2d6a8f"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-YfZhKBUDDS6L.jpg",
+                    "genres": ["Action", "Adventure", "Fantasy", "Supernatural"],
+                    "averageScore": 87,
+                    "popularity": 480000,
+                    "studios": {
+                        "nodes": [{ "id": 858, "name": "ufotable", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 7,
+                    "title": {
+                        "romaji": "Cowboy Bebop",
+                        "english": "Cowboy Bebop",
+                        "native": "カウボーイビバップ"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "In the year 2071, a ragtag crew of bounty hunters aboard the spaceship Bebop chase down criminals across the solar system while confronting their own troubled pasts.",
+                    "startDate": { "year": 1998, "month": 4, "day": 3 },
+                    "endDate": { "year": 1999, "month": 4, "day": 24 },
+                    "season": "SPRING",
+                    "seasonYear": 1998,
+                    "episodes": 26,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-CXtrrkMpJ8Zq.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.jpg",
+                        "color": "#e47840"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1-T3PJUjFJyRFg.jpg",
+                    "genres": ["Action", "Adventure", "Drama", "Sci-Fi"],
+                    "averageScore": 89,
+                    "popularity": 230000,
+                    "studios": {
+                        "nodes": [{ "id": 13, "name": "Sunrise", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 8,
+                    "title": {
+                        "romaji": "Mushishi",
+                        "english": "Mushishi",
+                        "native": "蟲師"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "Ginko is a Mushi Master who travels across a fantastical version of Meiji-era Japan studying and helping those afflicted by Mushi — mysterious primal life forms.",
+                    "startDate": { "year": 2005, "month": 10, "day": 23 },
+                    "endDate": { "year": 2006, "month": 6, "day": 19 },
+                    "season": "FALL",
+                    "seasonYear": 2005,
+                    "episodes": 26,
+                    "duration": 25,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/457-7LSGafFRNMB5.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/457-7LSGafFRNMB5.jpg",
+                        "color": "#7db87d"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/457-cZPDFgfAhixx.jpg",
+                    "genres": ["Adventure", "Fantasy", "Mystery", "Slice of Life", "Supernatural"],
+                    "averageScore": 88,
+                    "popularity": 130000,
+                    "studios": {
+                        "nodes": [{ "id": 19, "name": "Artland", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 9,
+                    "title": {
+                        "romaji": "Vinland Saga",
+                        "english": "Vinland Saga",
+                        "native": "ヴィンランド・サガ"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "A young Viking named Thorfinn joins the band of mercenaries who killed his father, driven by his desire for revenge, while witnessing the brutal reality of war and conquest.",
+                    "startDate": { "year": 2019, "month": 7, "day": 8 },
+                    "endDate": { "year": 2019, "month": 12, "day": 30 },
+                    "season": "SUMMER",
+                    "seasonYear": 2019,
+                    "episodes": 24,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101348-qyBNrFAtMbUk.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101348-qyBNrFAtMbUk.jpg",
+                        "color": "#c8a45d"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101348-Kyz6RFJNmvNu.jpg",
+                    "genres": ["Action", "Adventure", "Drama", "Historical"],
+                    "averageScore": 90,
+                    "popularity": 270000,
+                    "studios": {
+                        "nodes": [{ "id": 11, "name": "Wit Studio", "isAnimationStudio": true }]
+                    }
+                },
+                {
+                    "id": 10,
+                    "title": {
+                        "romaji": "Neon Genesis Evangelion",
+                        "english": "Neon Genesis Evangelion",
+                        "native": "新世紀エヴァンゲリオン"
+                    },
+                    "type": "ANIME",
+                    "format": "TV",
+                    "status": "FINISHED",
+                    "description": "In a post-apocalyptic world, a reluctant teenager is recruited by his estranged father to pilot a giant bio-mechanical mecha to fight monstrous beings known as Angels.",
+                    "startDate": { "year": 1995, "month": 10, "day": 4 },
+                    "endDate": { "year": 1996, "month": 3, "day": 27 },
+                    "season": "FALL",
+                    "seasonYear": 1995,
+                    "episodes": 26,
+                    "duration": 24,
+                    "coverImage": {
+                        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx30-2MSmSABuJSzM.jpg",
+                        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx30-2MSmSABuJSzM.jpg",
+                        "color": "#c85d5d"
+                    },
+                    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/30-cTBwvYLFgl9j.jpg",
+                    "genres": ["Action", "Drama", "Mecha", "Psychological", "Sci-Fi"],
+                    "averageScore": 86,
+                    "popularity": 290000,
+                    "studios": {
+                        "nodes": [{ "id": 23, "name": "Gainax", "isAnimationStudio": true }]
+                    }
+                }
+            ]
+        }
+    }
+}
