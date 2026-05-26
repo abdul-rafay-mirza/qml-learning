@@ -17,13 +17,8 @@ Kirigami.ApplicationWindow {
             id: id_peopleList
             model: peopleList
             clip: true
-
-            delegate: Kirigami.Card {
-                width : id_peopleList.width
-                contentItem: Controls.Label {
-                    text: modelData.name
-                }
-            }
+            spacing: 8
+            delegate: PeopleCard{}
         }
     }
 

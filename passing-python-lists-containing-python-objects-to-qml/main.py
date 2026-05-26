@@ -49,6 +49,7 @@ class Backend(QObject):
     def __init__(self, engine):
         super().__init__()
         self.engine = engine
+        self.__people = []
 
     def get_window(self):
         root_objects = self.engine.rootObjects()
@@ -61,13 +62,14 @@ class Backend(QObject):
         people_dict: dict = json.load(myFile)
         myFile.close()
 
-        people: list[Person] = []
+        self.__people = []
         for x in range(len(people_dict['people'])):
             a_person_dict = people_dict['people'][x]
             person_object = Person(a_person_dict['name'], a_person_dict['age'], a_person_dict['gender'])
-            people.append(person_object)
-
-        return people
+            self.__people.append(person_object)
+            print(self.__people[x].getName())
+        
+        return self.__people
 
     @Slot()
     def people_to_qml(self):
