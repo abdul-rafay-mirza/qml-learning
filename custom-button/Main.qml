@@ -19,15 +19,11 @@ Kirigami.ApplicationWindow {
             border.width: 2
             radius: 12
 
-            signal clicked()
-
             TapHandler {
-                onTapped: parent.clicked()
                 gesturePolicy: TapHandler.WithinBounds
-            }
-
-            onClicked: {
-                backend.onOuterCliked()
+                onTapped: {
+                    backend.onOuterCliked()
+                }
             }
 
             Rectangle {
@@ -45,17 +41,12 @@ Kirigami.ApplicationWindow {
                 border.width: 2         // Visible border thickness
                 radius: 12              // Rounded edges (increase for a pill shape)
 
-                signal clicked()
-
                 TapHandler {
-                    onTapped: parent.clicked()
-
                     // Removes the outer rectangle from being clicked
                     gesturePolicy: TapHandler.WithinBounds
-                }
-
-                onClicked: {
-                    backend.onInnerCliked()
+                    onTapped: {
+                        backend.onInnerCliked()
+                    }
                 }
 
                 Controls.Label {
