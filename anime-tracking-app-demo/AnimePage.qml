@@ -13,7 +13,13 @@ Kirigami.Page {
         anchors.fill: parent
         model: animeList
 
-        delegate: AnimeCard {}
-        onModelChanged: Qt.callLater(() => id_animeList.forceLayout())
+        delegate: AnimeCard {
+            animeName: modelData.name
+            formatType: modelData.formatType
+            status: modelData.status
+            episodes: modelData.episodes
+            coverImage: modelData.coverImage
+            averageScore: modelData.averageScore
+        }
     }
 }
