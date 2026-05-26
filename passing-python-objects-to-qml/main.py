@@ -67,6 +67,8 @@ if __name__ == "__main__":
     person1 = Person("Bob", 22, "Male")
 
     engine.rootContext().setContextProperty("backend", backend)
+
+    # person1 will now be an object inside QML
     engine.rootContext().setContextProperty("person1", person1)
 
     qml_file = Path(__file__).resolve().parent / "Main.qml"
