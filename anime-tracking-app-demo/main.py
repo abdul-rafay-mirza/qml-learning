@@ -5,12 +5,14 @@ from pathlib import Path
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import QObject, Slot
-from PySide6.QtQuickControls2 import QQuickStyle 
+from PySide6.QtQuickControls2 import QQuickStyle
+from Anime import Anime
 
 class Backend(QObject):
     def __init__(self, engine):
         super().__init__()
         self.engine = engine
+        self.__animeList = []
 
     def get_window(self):
         root_objects = self.engine.rootObjects()
@@ -18,40 +20,30 @@ class Backend(QObject):
             return root_objects[0]
         return None
 
-    @Slot(str)
-    def get_text_from_text_field(self, text: str):
-        '''
-        stores the text from the text field in json file
-        '''
+    def json_to_anime_list(self) -> list[Anime]:
+        myFile = open("animeDatabase.json", "r")
+        animes_dict: dict = json.load(myFile)
+        myFile.close()
 
-        window = self.get_window()
-        if window:
-            # 1. Read from notes.json and store it as a python dictionary
-            json_file = open('notes.json', 'r')
-            notes_dict: dict = json.load(json_file)
+        anime_list_verbose = animes_dict["data"]["Page"]["media"]
 
-            # 2. Append the text from the text field inside the dictionary
-            notes_dict['notes'].append(text)
-            json_file.close()
+        for x in range(len(anime_list_verbose)):
+            single_anime_verbose: dict = anime_list_verbose[x]
 
-            # 3. Dump the new array in the json file
-            json_file_for_writing = open('notes.json', 'w')
-            json.dump(notes_dict, json_file_for_writing)
-            json_file_for_writing.close()
+            anime_name: str = single_anime_verbose["title"]["english"]
+            format_type: str = single_anime_verbose["format"]
+            status: str = single_anime_verbose["status"]
+            episodes: int = single_anime_verbose["episodes"]
+            cover_image: str = single_anime_verbose["coverImage"]["large"]
+            average_score: int = single_anime_verbose["averageScore"]
 
-            self.list_to_javascript_qml()
+            anime_object = Anime(anime_name, format_type, status, episodes, cover_image, average_score)
 
-    def list_to_javascript_qml(self):
-        window = self.get_window()
-        if window:
-            # 1. Read notes from json file
-            myfile = open('notes.json', 'r')
-            notes: dict[list[str]] = json.load(myfile)
-            myfile.close()
-            notes_array = notes['notes']
+            self.__animeList.append(anime_object)
 
-            # 2. Call the javascript function inside qml file
-            window.getNotes(notes_array)
+        return self.__animeList
+
+
 
 
 if __name__ == "__main__":
