@@ -16,6 +16,7 @@ Kirigami.AbstractCard {
     property int    averageScore
 
     signal cardClicked()
+    signal ratingClicked()
 
     // Geometry
     width: id_animeList.width
@@ -25,20 +26,20 @@ Kirigami.AbstractCard {
     topPadding:    0
     bottomPadding: 0
 
-    TapHandler {
-        onTapped: animeCard.cardClicked()
-    }
-
-    HoverHandler {
-        cursorShape: Qt.PointingHandCursor
-    }
-
     contentItem: RowLayout {
         anchors {
             fill:         parent
             bottomMargin: 5
         }
         spacing: 0
+
+        TapHandler {
+            gesturePolicy: TapHandler.WithinBounds
+            onTapped: {
+                animeCard.cardClicked()
+                backend.onCardClicked()
+            }
+        }
 
         // Cover image
         Rectangle {
@@ -112,6 +113,14 @@ Kirigami.AbstractCard {
             RowLayout {
                 Layout.fillWidth: true
                 spacing: 4
+
+                TapHandler {
+                    gesturePolicy: TapHandler.WithinBounds
+                    onTapped:{
+                        animeCard.ratingClicked()
+                        backend.onRatingClicked()
+                    }
+                }
 
                 Kirigami.Icon {
                     source: "starred-symbolic"

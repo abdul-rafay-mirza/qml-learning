@@ -55,6 +55,17 @@ class Backend(QObject):
         if window:
             window.pythonToQML(self.json_to_anime_list())
 
+    @Slot()
+    def onCardClicked(self):
+        window = self.get_window()
+        if window:
+            print("Card Clicked!")
+
+    @Slot()
+    def onRatingClicked(self):
+        window = self.get_window()
+        if window:
+            print("Rating Clicked!")
 
 
 if __name__ == "__main__":
