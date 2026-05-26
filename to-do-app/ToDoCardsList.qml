@@ -3,6 +3,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
+// ListView supports Gesture Scrolling as well, so you can hold the mouse and move up and down to scroll
 ListView {
     id: taskListView
     Layout.fillWidth: true
