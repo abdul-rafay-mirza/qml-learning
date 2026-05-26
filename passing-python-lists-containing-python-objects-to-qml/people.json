@@ -1,0 +1,34 @@
+{
+    "people": [
+        {
+            "name": "Ayesha",
+            "age": 22,
+            "gender": "Female"
+        },
+        {
+            "name": "Zargham",
+            "age": 17,
+            "gender": "Make"
+        },
+        {
+            "name": "Umar",
+            "age": 15,
+            "gender": "Male"
+        },
+        {
+            "name": "Fatima",
+            "age": 28,
+            "gender": "Female"
+        },
+        {
+            "name": "Sarah",
+            "age": 15,
+            "gender": "Female"
+        },
+        {
+            "name": "Daud",
+            "age": 12,
+            "gender": "Male"
+        }
+    ]
+}
