@@ -19,45 +19,45 @@ Kirigami.ApplicationWindow {
             border.width: 2
             radius: 12
 
+            // Direct invocation
             TapHandler {
                 gesturePolicy: TapHandler.WithinBounds
                 onTapped: {
-                    backend.onOuterCliked()
+                    backend.outer_clicked()
                 }
             }
 
             Rectangle {
                 id: innerRectangle
-                // Position it cleanly on the page instead of filling the whole screen
                 anchors.centerIn: parent
                 
-                // Sizing your button explicitly
                 width: 200
                 height: 60
 
-                // 1. STYLING: Black background with a white border
-                color: '#000000'        // Filled with black
-                border.color: '#ffffff' // White border
-                border.width: 2         // Visible border thickness
-                radius: 12              // Rounded edges (increase for a pill shape)
+                // Signal-handler pattern / event-driven pattern
+                signal innerClicked()
+ 
+                color: '#000000'
+                border.color: '#ffffff'
+                border.width: 2
+                radius: 12
 
                 TapHandler {
-                    // Removes the outer rectangle from being clicked
+                    // Removes the outer rectangle from being clicked using TapHandler.WithinBounds
                     gesturePolicy: TapHandler.WithinBounds
-                    onTapped: {
-                        backend.onInnerCliked()
-                    }
+                    onTapped: innerRectangle.innerClicked()
+                }
+
+                onInnerClicked: {
+                    backend.inner_clicked()
                 }
 
                 Controls.Label {
-                    // 2. STRETCHING: Force the text label boundaries to match the entire rectangle
                     anchors.fill: parent
                     
                     text: "Click Me!"
-                    color: "#ffffff"    // Changed to white so it's visible on the black background
+                    color: "#ffffff"
 
-                    // 3. CENTER TEXT INTERNALLY: Since the label box matches the rectangle size,
-                    // we tell the text alignment engine to center itself inside its own container bounds.
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     

@@ -21,14 +21,14 @@ class Backend(QObject):
         return None
 
     @Slot()
-    def onInnerCliked(self):
+    def inner_clicked(self):
         window = self.get_window()
         if window:
             self.inner_count += 1
             print(f"Inner Clicked!, Count: {self.inner_count}")
 
     @Slot()
-    def onOuterCliked(self):
+    def outer_clicked(self):
         window = self.get_window()
         if window:
             self.outer_count += 1
