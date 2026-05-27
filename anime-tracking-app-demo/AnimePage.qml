@@ -15,7 +15,12 @@ Kirigami.Page {
     AnimeCardDialog {
         id: animeCardDialog
     }
-    
+
+    // The same process will apply for accessing Components/Dialogs/RatingDialog.qml
+    RatingDialog {
+        id: ratingDialog
+    }
+
     ListView {
         id: id_animeList
         anchors.fill: parent
@@ -37,7 +42,13 @@ Kirigami.Page {
                 // Using the id in Components/Dialogs/AnimeCardDialog.qml
                 animeCardDialog.open()
             }
-            onRatingClicked: backend.on_rating_clicked()
+
+            onRatingClicked: {
+                backend.on_rating_clicked()
+
+                // Using the id in Components/Dialog/RatingDialog.qml
+                ratingDialog.open()
+            }
         }
     }
 }
