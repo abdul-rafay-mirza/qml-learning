@@ -45,6 +45,7 @@ Kirigami.ApplicationWindow {
                 TapHandler {
                     // Removes the outer rectangle from being clicked using TapHandler.WithinBounds
                     gesturePolicy: TapHandler.WithinBounds
+                    // emis the Signal. Can also use parent.innerClicked()
                     onTapped: innerRectangle.innerClicked()
                 }
 

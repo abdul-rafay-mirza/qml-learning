@@ -20,6 +20,9 @@ Kirigami.Page {
             episodes: modelData.episodes
             coverImage: modelData.coverImage
             averageScore: modelData.averageScore
+
+            onCardClicked: backend.on_card_clicked()
+            onRatingClicked: backend.on_rating_clicked()
         }
     }
 }

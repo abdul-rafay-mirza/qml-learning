@@ -37,7 +37,6 @@ Kirigami.AbstractCard {
             gesturePolicy: TapHandler.WithinBounds
             onTapped: {
                 animeCard.cardClicked()
-                backend.onCardClicked()
             }
         }
 
@@ -61,7 +60,7 @@ Kirigami.AbstractCard {
                                             // slightly more expensive. false = pixelated/nearest neighbour
                 visible: animeCard.coverImage !== ""  // hides the Image item entirely if there is no URL,
                                                     // which lets the fallback Kirigami.Icon show instead
-}
+            }
 
             Kirigami.Icon {
                 anchors.centerIn: parent
@@ -118,7 +117,6 @@ Kirigami.AbstractCard {
                     gesturePolicy: TapHandler.WithinBounds
                     onTapped:{
                         animeCard.ratingClicked()
-                        backend.onRatingClicked()
                     }
                 }
 
