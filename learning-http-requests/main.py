@@ -107,6 +107,20 @@ query ($id: Int) {
         }
       }
     }
+    recommendations(sort: [RATING_DESC], perPage: 7) {
+      nodes {
+        mediaRecommendation {
+          title {
+            english
+            native
+            romaji
+          }
+          coverImage {
+            large
+          }
+        }
+      }
+    }
   }
 }
 '''

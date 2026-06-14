@@ -9,7 +9,7 @@
             },
             "nextAiringEpisode": {
                 "airingAt": 1781532000,
-                "timeUntilAiring": 90040,
+                "timeUntilAiring": 88680,
                 "episode": 12
             },
             "format": "ONA",
@@ -433,6 +433,94 @@
                             },
                             "image": {
                                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n110643-Lj9A0d0uJ3d9.jpg"
+                            }
+                        }
+                    }
+                ]
+            },
+            "recommendations": {
+                "nodes": [
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Frieren: Beyond Journey\u2019s End",
+                                "native": "\u846c\u9001\u306e\u30d5\u30ea\u30fc\u30ec\u30f3",
+                                "romaji": "Sousou no Frieren"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Delicious in Dungeon",
+                                "native": "\u30c0\u30f3\u30b8\u30e7\u30f3\u98ef",
+                                "romaji": "Dungeon Meshi"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx153518-IVXPDY5ph3kO.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Little Witch Academia (TV)",
+                                "native": "\u30ea\u30c8\u30eb\u30a6\u30a3\u30c3\u30c1\u30a2\u30ab\u30c7\u30df\u30a2 (TV)",
+                                "romaji": "Little Witch Academia (TV)"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21858-huBrbIOGMYXv.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Kiki's Delivery Service",
+                                "native": "\u9b54\u5973\u306e\u5b85\u6025\u4fbf",
+                                "romaji": "Majo no Takkyuubin"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx512-UwP8X4BR8YoM.png"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Fullmetal Alchemist: Brotherhood",
+                                "native": "\u92fc\u306e\u932c\u91d1\u8853\u5e2b FULLMETAL ALCHEMIST",
+                                "romaji": "Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5114-nSWCgQlmOMtj.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Secrets of the Silent Witch",
+                                "native": "\u30b5\u30a4\u30ec\u30f3\u30c8\u30fb\u30a6\u30a3\u30c3\u30c1 \u6c88\u9ed9\u306e\u9b54\u5973\u306e\u96a0\u3057\u3054\u3068",
+                                "romaji": "Silent Witch: Chinmoku no Majo no Kakushigoto"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179966-g0EU7rVe2Og7.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "mediaRecommendation": {
+                            "title": {
+                                "english": "Wandering Witch: The Journey of Elaina",
+                                "native": "\u9b54\u5973\u306e\u65c5\u3005",
+                                "romaji": "Majo no Tabitabi"
+                            },
+                            "coverImage": {
+                                "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx112609-hBCbnYlEHluz.jpg"
                             }
                         }
                     }
