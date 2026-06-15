@@ -9,7 +9,7 @@ from PySide6.QtCore import QObject, Slot, Signal
 from PySide6.QtQuickControls2 import QQuickStyle
 
 class Backend(QObject):
-    animePageLoaded = Signal(str, str)
+    animePageLoaded = Signal(str, str, str, str)
     url = "https://graphql.anilist.co"
     query = '''
         query ($id: Int) {
@@ -164,8 +164,10 @@ class Backend(QObject):
 
           title = json_file["data"]["Media"]["title"]["romaji"]
           bannerImage = json_file["data"]["Media"]["bannerImage"]
+          coverImage = json_file["data"]["Media"]["coverImage"]["large"]
+          description = json_file["data"]["Media"]["description"]
 
-          self.animePageLoaded.emit(title, bannerImage)
+          self.animePageLoaded.emit(title, bannerImage, coverImage, description)
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
@@ -195,4 +197,3 @@ if __name__ == "__main__":
         sys.exit(-1)
 
     sys.exit(app.exec())
-

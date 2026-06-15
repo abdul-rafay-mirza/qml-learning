@@ -10,13 +10,17 @@ Kirigami.ApplicationWindow {
 
     property var animeTitle
     property var animeBannerImage
+    property var animeCoverImage
+    property var animeDescription
 
     Connections {
         target: backend
 
-        function onAnimePageLoaded(_title, _bannerImage) {
+        function onAnimePageLoaded(_title, _bannerImage, _coverImage, _description) {
             animeTitle = _title
             animeBannerImage = _bannerImage
+            animeCoverImage = _coverImage
+            animeDescription = _description
         }
     }
 
@@ -32,6 +36,8 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
                 title: animeTitle
                 bannerImage: animeBannerImage
+                coverImage: animeCoverImage
+                description: animeDescription
             }
 
             Item { Layout.fillHeight: true }
