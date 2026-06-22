@@ -19,7 +19,7 @@ Kirigami.ApplicationWindow {
             onClicked: picker.open()
         }
 
-        WideDatePopup {
+        DatePopup {
             id: picker
             popupWidth: 400
 
