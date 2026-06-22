@@ -15,7 +15,11 @@ Kirigami.ApplicationWindow {
         spacing: 20
 
         Controls.Button {
-            text: "Pick date"
+            id: button
+
+            text: "Start Date"
+            icon.name: "view-calendar"
+
             onClicked: picker.open()
         }
 
@@ -25,6 +29,7 @@ Kirigami.ApplicationWindow {
 
             onAccepted: {
                 console.log("Chosen:", value)
+                button.text = "Start Date: " + Qt.formatDate(value, "d/M/yyyy")
             }
         }
     }
