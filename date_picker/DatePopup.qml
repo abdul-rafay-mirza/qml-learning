@@ -12,7 +12,7 @@ import org.kde.kirigamiaddons.components as Components
 
 /**
  * A popup that prompts the user to select a date.
- * Drop this file into your project and keep private/DatePicker.qml beside it.
+ * Drop this file into your project and keep DatePicker.qml beside it.
  */
 Controls.Dialog {
     id: root
