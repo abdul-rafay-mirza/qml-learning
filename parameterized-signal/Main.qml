@@ -18,7 +18,6 @@ Kirigami.ApplicationWindow {
 
     property var name: "Downloading..."
     property var size: 0
-    property bool confirmationVisible: false
 
     pageStack.initialPage: Kirigami.Page {
         title: "File Downloader"
@@ -48,12 +47,8 @@ Kirigami.ApplicationWindow {
             Controls.Label {
                 id: downloadFinishConfirmation
                 text: "Download Finished!"
-                visible: confirmationVisible
+                visible: root.size > 0 // Property Binding https://doc.qt.io/qt-6/qtqml-syntax-propertybinding.html
             }
         }
-    }
-
-    onNameChanged: {
-        confirmationVisible = true
     }
 }
