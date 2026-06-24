@@ -1,39 +1,44 @@
 import QtQuick
 import QtQuick.Controls as Controls
-import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-Kirigami.AbstractCard {
+Item {
     id: imageCard
-    
-    // Changed property name to avoid inner-scope name collisions
     property string imageUrl: ""
 
-    width: 500
-    height: 500
-    leftPadding:   0
-    rightPadding:  0
-    topPadding:    0
-    bottomPadding: 0
-
-    contentItem: Rectangle {
-        width: 500
-        height: 500
-        color: "transparent"
+    Rectangle {
+        anchors.fill: parent
+        radius: 6
+        color:  Kirigami.Theme.alternateBackgroundColor
+        clip:   true
 
         Image {
+            id: img
             anchors.fill: parent
-            // Explicit reference to the card component's property string
             source:       imageCard.imageUrl
-            fillMode:     Image.PreserveAspectCrop
+            // Container already matches the image's aspect ratio, so
+            // PreserveAspectFit fills cleanly with no letterboxing.
+            fillMode:     Image.PreserveAspectFit
             smooth:       true
-            visible:      imageCard.imageUrl !== ""
-            
-            // Helpful loading status printed to console
+            asynchronous: true
+            cache:        true
+
             onStatusChanged: {
-                if (status === Image.Error) {
-                    console.log("Failed to load image from:", source)
-                }
+                if (status === Image.Error)
+                    console.log("Failed to load image:", source)
+            }
+        }
+
+        // Placeholder while the network fetch is in-flight
+        Rectangle {
+            anchors.fill: parent
+            color:   parent.color
+            visible: img.status !== Image.Ready
+
+            Controls.BusyIndicator {
+                anchors.centerIn: parent
+                running: img.status === Image.Loading
+                visible: running
             }
         }
     }
