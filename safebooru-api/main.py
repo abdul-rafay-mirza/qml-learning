@@ -37,7 +37,7 @@ class Backend(QObject):
                 "q": "index",
                 "json": 1,            # Force Safebooru to give us clean Python dictionaries
                 "tags": fixed_search_tag,
-                "limit": 100
+                "limit": 500
             }
 
             try:
@@ -56,9 +56,9 @@ class Backend(QObject):
                     image_data: list[dict] = []
                     for d in posts:
                         image_data.append({
-                            "url": d["file_url"],
-                            "width": d.get("width", 800),
-                            "height": d.get("height", 600)
+                            "url": d["sample_url"],
+                            "width": d.get("sample_width", 800),
+                            "height": d.get("sample_height", 600)
                         })
 
                     self.getResponse.emit(image_data)
