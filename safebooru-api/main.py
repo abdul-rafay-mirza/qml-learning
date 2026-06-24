@@ -6,6 +6,7 @@ from PySide6.QtCore import QObject, Slot, Signal
 import requests
 import difflib
 import json
+from popular_tags import POPULAR_TAGS
 
 # 1. Define a backend class that QML can interact with
 class Backend(QObject):
@@ -71,12 +72,6 @@ class Backend(QObject):
             
 
     def get_fuzzy_tag(self, user_input):
-            POPULAR_TAGS = [
-                "ganyu_(genshin_impact)", "furina_(genshin_impact)", "raiden_shogun", 
-                "hu_tao_(genshin_impact)", "kamisato_ayaka", "hatsune_miku", 
-                "rem_(re:zero)", "emilia_(re:zero)", "klee_(genshin_impact)"
-            ]
-
             user_input = user_input.strip().lower()
             
             # 1. Direct Substring Match (Fixes "ganyu" -> "ganyu_(genshin_impact)")
