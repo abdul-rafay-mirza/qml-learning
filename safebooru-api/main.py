@@ -6,6 +6,7 @@ from PySide6.QtCore import QObject, Slot, Signal
 import requests
 import difflib
 import json
+import threading
 from popular_tags import POPULAR_TAGS
 
 # 1. Define a backend class that QML can interact with
@@ -24,8 +25,7 @@ class Backend(QObject):
 
     @Slot(str)
     def get_search_query(self, search_query):
-        window = self.get_window()
-        if window:
+        def _run():
             print(f"User searched: {search_query}")
 
             fixed_search_tag = self.get_fuzzy_tag(search_query)
@@ -68,7 +68,8 @@ class Backend(QObject):
                     print(f"Safebooru responded with error code: {response.status_code}")
             except Exception as e:
                 print(f"Failed to fetch from Safebooru: {e}")
-
+                
+        threading.Thread(target=_run, daemon=True).start()
             
 
     def get_fuzzy_tag(self, user_input):

@@ -35,6 +35,7 @@ Kirigami.ApplicationWindow {
                     Layout.rightMargin: Kirigami.Units.largeSpacing
                     placeholderText: "Search character..."
                     onTextChanged: root.searchText = text
+                    autoAccept: false
                     onAccepted:    backend.get_search_query(root.searchText)
                 }
 

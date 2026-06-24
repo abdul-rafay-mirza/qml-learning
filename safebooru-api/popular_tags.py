@@ -10,6 +10,7 @@ POPULAR_TAGS = [
     "noelle_(genshin_impact)",
     "sucrose_(genshin_impact)",
     "venti_(genshin_impact)",
+    "mona_(genshin_impact) ",
 
     # Liyue
     "beidou_(genshin_impact)",

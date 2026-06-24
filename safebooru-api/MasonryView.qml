@@ -34,7 +34,7 @@ import org.kde.kirigami as Kirigami
  *
  * Signals
  * ───────
- *   tileClicked(int index, var modelData)
+ *   tileClicked(index: int, modelData: var)
  *       Emitted when the user taps a tile.  `index` is the item's position in
  *       the original flat model array.
  *
@@ -75,7 +75,7 @@ Item {
     property real spacing:         Kirigami.Units.smallSpacing
     property int  scrollBarPolicy: Controls.ScrollBar.AsNeeded
 
-    signal tileClicked(int index, var modelData)
+    signal tileClicked(index: int, modelData: var)
 
     // ── Internal layout engine ─────────────────────────────────────────────
     readonly property int _numColumns: Math.max(minColumns, Math.floor(width / columnWidth))
