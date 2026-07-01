@@ -6,7 +6,7 @@ import org.kde.kirigami as Kirigami
 /*
 Use connections when python emits a signal and you want QML to react to it
 
-we were doing QML -> Python before, by emitting a signal in QML and having a Slot in Python o that Python can listen to it.
+we were doing QML -> Python before, by emitting a signal in QML and having a Slot in Python so that Python can listen to it.
 
 Say Python finishes a background task and wants to update the UI. Python emits a signal, and QML listens with Connections
 */
